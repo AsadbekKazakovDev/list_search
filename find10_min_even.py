@@ -5,5 +5,20 @@ def find_min_even(data):
         data: list of numbers
     returns: minimum even number in the list
     """
-    return 0
+    j = 0
+    ans=[]
+    while j<=len(data)-1:
+        if data[j]%2==0:
+            ans.append(data[j])
+        j+=1
+            
+    i=0
+    mn = ans[0]
+    while i<=len(ans)-1:
+        if mn>ans[i]:
+            mn = ans[i]  
+        i+=1
+    return mn
+data = [29,-9,4,5,6,7,8,9]
+print(find_min_even(data))
 
